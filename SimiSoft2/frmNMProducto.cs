@@ -16,7 +16,10 @@ namespace SimiSoft2
     {
 
         private Producto producto;
-        //cuando es nuevo producto
+
+
+
+        //      cuando es nuevo producto
         public frmNMProducto()
         {
             InitializeComponent();
@@ -62,6 +65,7 @@ namespace SimiSoft2
                 {
                     if (new Producto
                     {
+
                         descripcion = txtDescripcion.Text,
                         unidadMedida = txtUnidadMedida.Text,
                         codigo = txtCodigo.Text,
