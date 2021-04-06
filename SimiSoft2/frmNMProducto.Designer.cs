@@ -124,6 +124,7 @@ namespace SimiSoft2
             this.txtPrecio.Properties.MaxLength = 7;
             this.txtPrecio.Size = new System.Drawing.Size(150, 26);
             this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrecio_Validating);
             // 
             // labelControl5
             // 

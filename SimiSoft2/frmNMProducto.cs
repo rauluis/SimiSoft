@@ -63,6 +63,14 @@ namespace SimiSoft2
             {
                 if (producto == null)
                 {
+                    decimal pre;
+                    if (!decimal.TryParse(txtPrecio.Text, out pre))
+                    {
+                        XtraMessageBox.Show("Ocurrio un error en la modificacion", Application.ProductName, MessageBoxButtons.OK,
+                             MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (new Producto
                     {
 
@@ -180,6 +188,16 @@ namespace SimiSoft2
         private void frmNMProducto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecio_Validating(object sender, CancelEventArgs e)
+        {
+
+            decimal pre;
+            if (!decimal.TryParse(txtPrecio.Text, out pre))
+            {
+                ErrorProvider.Equals(txtPrecio, "Ingrese valor en numeros");
+            }
         }
     }
 }

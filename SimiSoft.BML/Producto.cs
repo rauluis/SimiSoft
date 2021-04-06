@@ -34,13 +34,14 @@ namespace SimiSoft.BML
         public int Add()
         {
             var parametros = new DynamicParameters();
-
+            parametros.Add("@idProductos", idProducto);
             parametros.Add("@descripcion", descripcion);
             parametros.Add("@unidadMedida", unidadMedida);
             parametros.Add("@codigo", codigo);
             parametros.Add("@precio", precio);
             parametros.Add("@stock", stock);
             parametros.Add("@marca", marca);
+            
 
             return dataAcces.Excute("stp_productos_add", parametros);
          }

@@ -65,6 +65,7 @@ namespace SimiSoft2
             this.txtDescuento.Properties.MaxLength = 2;
             this.txtDescuento.Size = new System.Drawing.Size(150, 26);
             this.txtDescuento.TabIndex = 4;
+            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
             // 
             // labelControl5
             // 
@@ -97,6 +98,7 @@ namespace SimiSoft2
             this.txtRazonS.Name = "txtRazonS";
             this.txtRazonS.Size = new System.Drawing.Size(150, 26);
             this.txtRazonS.TabIndex = 2;
+            this.txtRazonS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonS_KeyPress);
             // 
             // labelControl3
             // 
@@ -112,6 +114,7 @@ namespace SimiSoft2
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(150, 26);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // labelControl2
             // 
