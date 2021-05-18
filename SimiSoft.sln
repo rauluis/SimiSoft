@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimiSoft.DAL", "SimiSoft.DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimiSoft.BML", "SimiSoft.BML\SimiSoft.BML.csproj", "{4A827FFD-24F9-4EA9-AD45-5C5FB87D9DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimiSoft2", "SimiSoft2\SimiSoft2.csproj", "{79A20ABE-9CFD-4D93-AB4A-9B1091289002}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimiSoft", "SimiSoft2\SimiSoft.csproj", "{79A20ABE-9CFD-4D93-AB4A-9B1091289002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

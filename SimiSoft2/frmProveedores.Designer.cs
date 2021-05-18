@@ -117,47 +117,41 @@ namespace SimiSoft2
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1197, 28);
+            this.barDockControlTop.Size = new System.Drawing.Size(798, 25);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 830);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1197, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(798, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 535);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1197, 28);
+            this.barDockControlRight.Location = new System.Drawing.Point(798, 25);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 535);
             // 
             // gcProveedores
             // 
             this.gcProveedores.DataSource = this.proveedorBindingSource;
             this.gcProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcProveedores.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gcProveedores.Location = new System.Drawing.Point(0, 28);
+            this.gcProveedores.Location = new System.Drawing.Point(0, 25);
             this.gcProveedores.MainView = this.gvProveedores;
-            this.gcProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.gcProveedores.MenuManager = this.barManager1;
             this.gcProveedores.Name = "gcProveedores";
-            this.gcProveedores.Size = new System.Drawing.Size(1197, 802);
+            this.gcProveedores.Size = new System.Drawing.Size(798, 535);
             this.gcProveedores.TabIndex = 4;
             this.gcProveedores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProveedores});
@@ -173,7 +167,7 @@ namespace SimiSoft2
             this.colnombre,
             this.coltelefono,
             this.colactivo});
-            this.gvProveedores.DetailHeight = 512;
+            this.gvProveedores.DetailHeight = 431;
             this.gvProveedores.FixedLineWidth = 3;
             this.gvProveedores.GridControl = this.gcProveedores;
             this.gvProveedores.Name = "gvProveedores";
@@ -187,50 +181,49 @@ namespace SimiSoft2
             // 
             this.colidProveedor.Caption = "ID";
             this.colidProveedor.FieldName = "idProveedor";
-            this.colidProveedor.MinWidth = 30;
+            this.colidProveedor.MinWidth = 23;
             this.colidProveedor.Name = "colidProveedor";
             this.colidProveedor.Visible = true;
             this.colidProveedor.VisibleIndex = 0;
-            this.colidProveedor.Width = 112;
+            this.colidProveedor.Width = 87;
             // 
             // colnombre
             // 
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
-            this.colnombre.MinWidth = 30;
+            this.colnombre.MinWidth = 23;
             this.colnombre.Name = "colnombre";
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
-            this.colnombre.Width = 112;
+            this.colnombre.Width = 87;
             // 
             // coltelefono
             // 
             this.coltelefono.Caption = "Telefono";
             this.coltelefono.FieldName = "telefono";
-            this.coltelefono.MinWidth = 30;
+            this.coltelefono.MinWidth = 23;
             this.coltelefono.Name = "coltelefono";
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 2;
-            this.coltelefono.Width = 112;
+            this.coltelefono.Width = 87;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
-            this.colactivo.MinWidth = 30;
+            this.colactivo.MinWidth = 23;
             this.colactivo.Name = "colactivo";
-            this.colactivo.Width = 112;
+            this.colactivo.Width = 87;
             // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 830);
+            this.ClientSize = new System.Drawing.Size(798, 560);
             this.Controls.Add(this.gcProveedores);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";

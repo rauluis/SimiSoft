@@ -45,7 +45,7 @@ namespace SimiSoft.BML
 
         public List<Cliente> GetAll()
         {
-            return dataAcces.Query<Cliente>("stp_clientes_getall");
+            return dataAcces.Query<Cliente>("stp_clientes_getall").ToList();
 
         }
 

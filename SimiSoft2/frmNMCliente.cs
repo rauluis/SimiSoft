@@ -36,20 +36,10 @@ namespace SimiSoft2
             txtDescuento.Text = cliente.descuento.ToString();
         }
 
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            if (Validar())
+           if (Validar())
             {
                 if (cliente == null)
                 {
@@ -75,6 +65,7 @@ namespace SimiSoft2
                 }
                 else
                 {
+
                     cliente.nombre = txtNombre.Text;
                     cliente.razonSocial = txtRazonS.Text;
                     cliente.telefono = txtTelefono.Text;
@@ -105,30 +96,7 @@ namespace SimiSoft2
             this.Close();
         }
 
-        private bool ValNumeros(KeyPressEventArgs e)
-        {
-            var ban = false;
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                ban = true;
-            }
-            return !ban;
-            
-        }
-        private bool ValLetras(KeyPressEventArgs e)
-        {
-            var ban = false;
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                ban = true;
-            }
-            return !ban;
-        }
-
+        
         private bool Validar()
         {
             var ban = false;
@@ -172,24 +140,16 @@ namespace SimiSoft2
             return !ban;
         }
 
-        private void txtTelefono_EditValueChanged(object sender, EventArgs e)
-        {
 
+
+        private void frmNMCliente_Load(object sender, EventArgs e)
+        {
+           
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
-            ValLetras(e);
-        }
 
-        private void txtRazonS_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValLetras(e);
-        }
-
-        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValNumeros(e);
         }
     }
 }

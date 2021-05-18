@@ -71,9 +71,27 @@ namespace SimiSoft2
                     form.Activate();
                     return;
                 }
-            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando clientes ...");
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando Clientes ...");
             new frmClientes() { MdiParent = this }.Show();
             SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+       
+
+        private void btnAdminVentas_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(FrmVentas))
+                {
+                    form.Activate();
+                    return;
+                }
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando Ventas ...");
+            new FrmVentas() { MdiParent = this }.Show();
+            SplashScreenManager.CloseDefaultWaitForm();
+
         }
     }
 }

@@ -122,47 +122,41 @@ namespace SimiSoft2
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1197, 28);
+            this.barDockControlTop.Size = new System.Drawing.Size(798, 25);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 830);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1197, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(798, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 535);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1197, 28);
+            this.barDockControlRight.Location = new System.Drawing.Point(798, 25);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 535);
             // 
             // gcProductos
             // 
             this.gcProductos.DataSource = this.productoBindingSource;
             this.gcProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcProductos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gcProductos.Location = new System.Drawing.Point(0, 28);
+            this.gcProductos.Location = new System.Drawing.Point(0, 25);
             this.gcProductos.MainView = this.gvProductos;
-            this.gcProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
-            this.gcProductos.Size = new System.Drawing.Size(1197, 802);
+            this.gcProductos.Size = new System.Drawing.Size(798, 535);
             this.gcProductos.TabIndex = 4;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProductos});
@@ -183,11 +177,13 @@ namespace SimiSoft2
             this.colstock,
             this.colmarca,
             this.colactivo});
-            this.gvProductos.DetailHeight = 512;
+            this.gvProductos.DetailHeight = 431;
             this.gvProductos.FixedLineWidth = 3;
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.Editable = false;
+            this.gvProductos.OptionsCustomization.AllowColumnMoving = false;
+            this.gvProductos.OptionsCustomization.AllowColumnResizing = false;
             this.gvProductos.OptionsView.ColumnAutoWidth = false;
             this.gvProductos.OptionsView.EnableAppearanceEvenRow = true;
             this.gvProductos.OptionsView.ShowAutoFilterRow = true;
@@ -197,90 +193,89 @@ namespace SimiSoft2
             // 
             this.colidProducto.Caption = "ID";
             this.colidProducto.FieldName = "idProducto";
-            this.colidProducto.MinWidth = 30;
+            this.colidProducto.MinWidth = 23;
             this.colidProducto.Name = "colidProducto";
             this.colidProducto.Visible = true;
             this.colidProducto.VisibleIndex = 0;
-            this.colidProducto.Width = 112;
+            this.colidProducto.Width = 87;
             // 
             // coldescripcion
             // 
             this.coldescripcion.Caption = "Descripcion";
             this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.MinWidth = 30;
+            this.coldescripcion.MinWidth = 23;
             this.coldescripcion.Name = "coldescripcion";
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 1;
-            this.coldescripcion.Width = 112;
+            this.coldescripcion.Width = 87;
             // 
             // colunidadMedida
             // 
             this.colunidadMedida.Caption = "UnidadM";
             this.colunidadMedida.FieldName = "unidadMedida";
-            this.colunidadMedida.MinWidth = 30;
+            this.colunidadMedida.MinWidth = 23;
             this.colunidadMedida.Name = "colunidadMedida";
             this.colunidadMedida.Visible = true;
             this.colunidadMedida.VisibleIndex = 2;
-            this.colunidadMedida.Width = 112;
+            this.colunidadMedida.Width = 87;
             // 
             // colcodigo
             // 
             this.colcodigo.Caption = "Codigo";
             this.colcodigo.FieldName = "codigo";
-            this.colcodigo.MinWidth = 30;
+            this.colcodigo.MinWidth = 23;
             this.colcodigo.Name = "colcodigo";
             this.colcodigo.Visible = true;
             this.colcodigo.VisibleIndex = 3;
-            this.colcodigo.Width = 112;
+            this.colcodigo.Width = 87;
             // 
             // colprecio
             // 
             this.colprecio.Caption = "Precio";
             this.colprecio.FieldName = "precio";
-            this.colprecio.MinWidth = 30;
+            this.colprecio.MinWidth = 23;
             this.colprecio.Name = "colprecio";
             this.colprecio.Visible = true;
             this.colprecio.VisibleIndex = 4;
-            this.colprecio.Width = 112;
+            this.colprecio.Width = 87;
             // 
             // colstock
             // 
             this.colstock.Caption = "Stock";
             this.colstock.FieldName = "stock";
-            this.colstock.MinWidth = 30;
+            this.colstock.MinWidth = 23;
             this.colstock.Name = "colstock";
             this.colstock.Visible = true;
             this.colstock.VisibleIndex = 5;
-            this.colstock.Width = 112;
+            this.colstock.Width = 87;
             // 
             // colmarca
             // 
             this.colmarca.Caption = "Marca";
             this.colmarca.FieldName = "marca";
-            this.colmarca.MinWidth = 30;
+            this.colmarca.MinWidth = 23;
             this.colmarca.Name = "colmarca";
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 6;
-            this.colmarca.Width = 112;
+            this.colmarca.Width = 87;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
-            this.colactivo.MinWidth = 30;
+            this.colactivo.MinWidth = 23;
             this.colactivo.Name = "colactivo";
-            this.colactivo.Width = 112;
+            this.colactivo.Width = 87;
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 830);
+            this.ClientSize = new System.Drawing.Size(798, 560);
             this.Controls.Add(this.gcProductos);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";

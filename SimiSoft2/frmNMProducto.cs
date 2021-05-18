@@ -37,7 +37,7 @@ namespace SimiSoft2
             }.GetById();//pobla todo.
             txtId.Text = producto.idProducto.ToString();
             txtDescripcion.Text = producto.descripcion;
-            txtUnidadMedida.Text = producto.unidadMedida;
+            cbtxtUnidadMedida.Text = producto.unidadMedida;
             txtCodigo.Text = producto.codigo;
             txtPrecio.Text = producto.precio.ToString();
             txtStock.Text = producto.stock.ToString();
@@ -58,7 +58,6 @@ namespace SimiSoft2
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
             if (Validar())
             {
                 if (producto == null)
@@ -71,32 +70,33 @@ namespace SimiSoft2
                         return;
                     }
 
+                   string a = cbtxtUnidadMedida.SelectedItem.ToString();
                     if (new Producto
                     {
 
                         descripcion = txtDescripcion.Text,
-                        unidadMedida = txtUnidadMedida.Text,
+                        unidadMedida =a,
                         codigo = txtCodigo.Text,
                         precio = Convert.ToDecimal(txtPrecio.Text),
                         stock = Convert.ToInt32(txtStock.Text),
                         marca = txtMarca.Text
-                    }.Add() > 0)
+                    }.Add() <= 0)
                     {
-                        XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
+                        XtraMessageBox.Show("Ocurrio un error en la insercion", Application.ProductName, MessageBoxButtons.OK,
+                           MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la insercion", Application.ProductName, MessageBoxButtons.OK,
-                           MessageBoxIcon.Information);
+                        XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         this.Close();
                     }
                 }
                 else
                 {
                     producto.descripcion = txtDescripcion.Text;
-                    producto.unidadMedida = txtUnidadMedida.Text;
+                    producto.unidadMedida = cbtxtUnidadMedida.Text;
                     producto.codigo = txtCodigo.Text;
                     producto.precio = Convert.ToDecimal(txtPrecio.Text);
                     producto.stock = Convert.ToInt32(txtStock.Text);
@@ -130,16 +130,28 @@ namespace SimiSoft2
                 txtDescripcion.Focus();
                 ban = true;
             }
-            if (string.IsNullOrEmpty(txtUnidadMedida.Text))
+            if (string.IsNullOrEmpty(cbtxtUnidadMedida.Text))
             {
-                txtUnidadMedida.ErrorText = "Ingresar una Unidad de Medida";
+
+                cbtxtUnidadMedida.ErrorText = "Selecciona un elemento";
                 if (!ban)
                 {
-                    txtUnidadMedida.Focus();
+                   cbtxtUnidadMedida.Focus();
                     ban = true;
                 }
 
             }
+              //if (string.IsNullOrEmpty(txtUnidadMedida.Text))
+            //{
+
+            //    txtUnidadMedida.ErrorText = "Ingresar una Unidad de Medida";
+            //    if (!ban)
+            //    {
+            //        txtUnidadMedida.Focus();
+            //        ban = true;
+            //    }
+
+            //}
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 txtCodigo.ErrorText = "Ingresar un codigo";
@@ -198,6 +210,11 @@ namespace SimiSoft2
             {
                 ErrorProvider.Equals(txtPrecio, "Ingrese valor en numeros");
             }
+        }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

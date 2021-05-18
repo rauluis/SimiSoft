@@ -95,6 +95,18 @@
     <Compile Include="frmNMProveedor.Designer.cs">
       <DependentUpon>frmNMProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNVenta.Designer.cs">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPago.Designer.cs">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +119,14 @@
     <Compile Include="frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validar.cs" />
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,11 +145,20 @@
     <EmbeddedResource Include="frmNMProveedor.resx">
       <DependentUpon>frmNMProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNVenta.resx">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPago.resx">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -147,8 +173,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SimiSoft.BML.Cliente.datasource" />
+    <None Include="Properties\DataSources\SimiSoft.BML.FormaPago.datasource" />
     <None Include="Properties\DataSources\SimiSoft.BML.Producto.datasource" />
     <None Include="Properties\DataSources\SimiSoft.BML.Proveedor.datasource" />
+    <None Include="Properties\DataSources\SimiSoft.BML.Venta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -67,7 +67,10 @@ namespace SimiSoft2
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            XtraMessageBox.Show("Seguro que quieres salir?", Application.ProductName, MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+
+            this.Close();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

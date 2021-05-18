@@ -119,50 +119,45 @@ namespace SimiSoft2
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1197, 28);
+            this.barDockControlTop.Size = new System.Drawing.Size(898, 25);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 830);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1197, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(898, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 535);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1197, 28);
+            this.barDockControlRight.Location = new System.Drawing.Point(898, 25);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 802);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 535);
             // 
             // gcClientes
             // 
             this.gcClientes.DataSource = this.clienteBindingSource;
             this.gcClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcClientes.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gcClientes.Location = new System.Drawing.Point(0, 28);
+            this.gcClientes.Location = new System.Drawing.Point(0, 25);
             this.gcClientes.MainView = this.gvClientes;
-            this.gcClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcClientes.MenuManager = this.barManager1;
             this.gcClientes.Name = "gcClientes";
-            this.gcClientes.Size = new System.Drawing.Size(1197, 802);
+            this.gcClientes.Size = new System.Drawing.Size(898, 535);
             this.gcClientes.TabIndex = 4;
             this.gcClientes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvClientes});
+            this.gcClientes.Click += new System.EventHandler(this.gcClientes_Click);
             // 
             // clienteBindingSource
             // 
@@ -177,7 +172,7 @@ namespace SimiSoft2
             this.coltelefono,
             this.coldescuento,
             this.colactivo});
-            this.gvClientes.DetailHeight = 512;
+            this.gvClientes.DetailHeight = 431;
             this.gvClientes.FixedLineWidth = 3;
             this.gvClientes.GridControl = this.gcClientes;
             this.gvClientes.Name = "gvClientes";
@@ -191,70 +186,71 @@ namespace SimiSoft2
             // 
             this.colidCliente.Caption = "ID";
             this.colidCliente.FieldName = "idCliente";
-            this.colidCliente.MinWidth = 30;
+            this.colidCliente.MinWidth = 23;
             this.colidCliente.Name = "colidCliente";
             this.colidCliente.Visible = true;
             this.colidCliente.VisibleIndex = 0;
-            this.colidCliente.Width = 112;
+            this.colidCliente.Width = 87;
             // 
             // colnombre
             // 
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
-            this.colnombre.MinWidth = 30;
+            this.colnombre.MinWidth = 23;
             this.colnombre.Name = "colnombre";
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
-            this.colnombre.Width = 112;
+            this.colnombre.Width = 87;
             // 
             // colrazonSocial
             // 
             this.colrazonSocial.Caption = "RazonS";
             this.colrazonSocial.FieldName = "razonSocial";
-            this.colrazonSocial.MinWidth = 30;
+            this.colrazonSocial.MinWidth = 23;
             this.colrazonSocial.Name = "colrazonSocial";
             this.colrazonSocial.Visible = true;
             this.colrazonSocial.VisibleIndex = 2;
-            this.colrazonSocial.Width = 112;
+            this.colrazonSocial.Width = 87;
             // 
             // coltelefono
             // 
             this.coltelefono.Caption = "Telefono";
             this.coltelefono.FieldName = "telefono";
-            this.coltelefono.MinWidth = 30;
+            this.coltelefono.MinWidth = 23;
             this.coltelefono.Name = "coltelefono";
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 3;
-            this.coltelefono.Width = 112;
+            this.coltelefono.Width = 87;
             // 
             // coldescuento
             // 
             this.coldescuento.Caption = "Descuento";
+            this.coldescuento.DisplayFormat.FormatString = "p";
+            this.coldescuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.coldescuento.FieldName = "descuento";
-            this.coldescuento.MinWidth = 30;
+            this.coldescuento.MinWidth = 23;
             this.coldescuento.Name = "coldescuento";
             this.coldescuento.Visible = true;
             this.coldescuento.VisibleIndex = 4;
-            this.coldescuento.Width = 112;
+            this.coldescuento.Width = 87;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
-            this.colactivo.MinWidth = 30;
+            this.colactivo.MinWidth = 23;
             this.colactivo.Name = "colactivo";
-            this.colactivo.Width = 112;
+            this.colactivo.Width = 87;
             // 
             // frmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 830);
+            this.ClientSize = new System.Drawing.Size(898, 560);
             this.Controls.Add(this.gcClientes);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";

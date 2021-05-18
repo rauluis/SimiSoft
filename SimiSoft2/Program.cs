@@ -1,6 +1,7 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,10 @@ namespace SimiSoft2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (new frmLogin().ShowDialog() == DialogResult.OK)
-                Application.Run(new frmMain());
+            //if (new frmLogin().ShowDialog() == DialogResult.OK)
+            //    Application.Run(new frmMain());
 
-
+            Application.Run(new frmMain());
 
         }
     }

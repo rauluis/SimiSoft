@@ -65,6 +65,7 @@ namespace SimiSoft2
             // 
             this.txtTelefono.Location = new System.Drawing.Point(149, 106);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.MaxLength = 20;
             this.txtTelefono.Size = new System.Drawing.Size(150, 26);
             this.txtTelefono.TabIndex = 2;
             // 
@@ -80,6 +81,7 @@ namespace SimiSoft2
             // 
             this.txtNombre.Location = new System.Drawing.Point(149, 62);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.MaxLength = 100;
             this.txtNombre.Size = new System.Drawing.Size(150, 26);
             this.txtNombre.TabIndex = 1;
             // 

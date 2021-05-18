@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using SimiSoft.BML;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Columns;
 using System.Windows.Forms;
 
 namespace SimiSoft2
@@ -56,14 +59,27 @@ namespace SimiSoft2
             gvClientes.BestFitColumns();
         }
 
+      
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new Cliente
+            ColumnView View = (ColumnView)gcClientes.FocusedView;
+            int rhFound = View.FocusedRowHandle ;
+            View.FocusedRowHandle = rhFound;
+            if (rhFound>0)
             {
-                idCliente = (int)gvClientes.GetFocusedRowCellValue("idCliente")
-            }.Delete();
-            clienteBindingSource.DataSource = new Cliente().GetAll();
-            gvClientes.BestFitColumns();
+                new Cliente
+                {
+                    idCliente = (int)gvClientes.GetFocusedRowCellValue("idCliente")
+                }.Delete();
+                clienteBindingSource.DataSource = new Cliente().GetAll();
+                gvClientes.BestFitColumns();
+            }           
+        }
+
+
+        private void gcClientes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
