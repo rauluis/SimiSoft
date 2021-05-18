@@ -68,6 +68,7 @@ namespace SimiSoft2
             if (rhFound>0)
             {
                 new Cliente
+
                 {
                     idCliente = (int)gvClientes.GetFocusedRowCellValue("idCliente")
                 }.Delete();
