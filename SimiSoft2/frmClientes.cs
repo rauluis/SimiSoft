@@ -70,6 +70,7 @@ namespace SimiSoft2
                 new Cliente
 
                 {
+
                     idCliente = (int)gvClientes.GetFocusedRowCellValue("idCliente")
                 }.Delete();
                 clienteBindingSource.DataSource = new Cliente().GetAll();
