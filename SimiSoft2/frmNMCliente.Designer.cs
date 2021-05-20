@@ -42,7 +42,6 @@ namespace SimiSoft2
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtDescuento = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRazonS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
@@ -159,7 +158,6 @@ namespace SimiSoft2
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtDescuento);
             this.groupControl1.Controls.Add(this.txtNombre);
             this.groupControl1.Controls.Add(this.btnCancelar);
@@ -190,15 +188,6 @@ namespace SimiSoft2
             this.txtDescuento.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDescuento.Size = new System.Drawing.Size(109, 22);
             this.txtDescuento.TabIndex = 4;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(183, 20);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(142, 16);
-            this.labelControl6.TabIndex = 28;
-            this.labelControl6.Text = "El profe no tiene este >v";
             // 
             // frmNMCliente
             // 
@@ -243,6 +232,5 @@ namespace SimiSoft2
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtDescuento;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

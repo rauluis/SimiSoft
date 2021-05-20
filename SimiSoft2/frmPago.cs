@@ -16,6 +16,7 @@ namespace SimiSoft2
     {
         public frmPago()
         {
+
             InitializeComponent();
         }
 
@@ -23,10 +24,10 @@ namespace SimiSoft2
         {
             formaPagoBindingSource.DataSource = new FormaPago().GetAll();
             Clean();
-            lupFpago.EditValue = 1;
+
             txtTotalPagar.EditValue = Misc.totalPago;
             txtPago.EditValue = Misc.totalPago;
-            txtPago.EditValue = 0;
+            txtCambio.EditValue = 0;
         }
 
         private void Clean()
@@ -34,22 +35,43 @@ namespace SimiSoft2
             txtTotalPagar.EditValue = null;
             txtPago.EditValue = null;
             txtCambio.EditValue = null;
+            lupFpago.EditValue = 1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
+            this.Close();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //if (lupFpago.EditValue == null)
-            //    return;
-            //Misc.totalPago = Convert.ToDecimal(txtPago.EditValue);
-            //Misc.idFPago = Convert.ToInt32(lupFpago.EditValue);
-            //txtCambio.EditValue = (Misc.totalPago - Misc.totalPago) * -1;
-            //this.DialogResult = DialogResult.OK;
-            //this.Close();
+            if (lupFpago.EditValue == null)
+                return;
+            Misc.totalPago = Convert.ToDecimal(txtPago.EditValue);
+            Misc.idFPago = Convert.ToInt32(lupFpago.EditValue);
+            txtCambio.EditValue = (Misc.totalPago - Misc.pago) * -1;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void txtPago_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                if (txtPago.EditValue != null)
+                    if (Convert.ToDecimal(txtPago.EditValue) >= Misc.totalPago)
+                    {
+                        txtCambio.EditValue = (Misc.totalPago - Convert.ToDecimal(txtPago.EditValue)) * -1;
+                        btnAceptar.Focus();
+                    }
+        }
+
+        private void lupFpago_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                if (lupFpago.EditValue != null)
+                    txtPago.Focus();
+
         }
     }
 }

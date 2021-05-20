@@ -21,12 +21,10 @@ namespace SimiSoft.BML
         {
 
         }
-
-
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@descripcion", parametros);
+            parametros.Add("@descripcion", descripcion);
             return dataAccess.Excute("stp_formaspago_add", parametros);
 
 
@@ -35,19 +33,19 @@ namespace SimiSoft.BML
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idFPago", parametros);
+            parametros.Add("@idFPago", idFPago);
             return dataAccess.Excute("stp_formaspago_delete", parametros);
         }
 
         public List<FormaPago> GetAll()
         {
-            return dataAccess.Query<FormaPago>("stp_formaspago_getball");
+            return dataAccess.Query<FormaPago>("stp_formaspago_getall");
         }
 
         public FormaPago GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idFPago", parametros);
+            parametros.Add("@idFPago", idFPago);
             return dataAccess.QuerySingle<FormaPago>("stp_formaspago_getbyid", parametros);
         }
 
@@ -55,8 +53,8 @@ namespace SimiSoft.BML
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idFPago", parametros);
-            parametros.Add("@descripcion", parametros);
+            parametros.Add("@idFPago", idFPago);
+            parametros.Add("@descripcion", descripcion);
             return dataAccess.Excute("stp_formaspago_update", parametros);
         }
 

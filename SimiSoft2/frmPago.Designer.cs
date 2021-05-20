@@ -32,6 +32,7 @@ namespace SimiSoft2
             this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lupFpago = new DevExpress.XtraEditors.LookUpEdit();
+            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCambio = new DevExpress.XtraEditors.TextEdit();
             this.txtPago = new DevExpress.XtraEditors.TextEdit();
             this.txtTotalPagar = new DevExpress.XtraEditors.TextEdit();
@@ -41,14 +42,13 @@ namespace SimiSoft2
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnAceptar = new DevExpress.XtraEditors.SimpleButton();
-            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupFpago.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCambio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPago.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -86,6 +86,11 @@ namespace SimiSoft2
             this.lupFpago.Properties.ValueMember = "idFPago";
             this.lupFpago.Size = new System.Drawing.Size(171, 36);
             this.lupFpago.TabIndex = 0;
+            this.lupFpago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lupFpago_KeyPress);
+            // 
+            // formaPagoBindingSource
+            // 
+            this.formaPagoBindingSource.DataSource = typeof(SimiSoft.BML.FormaPago);
             // 
             // txtCambio
             // 
@@ -108,11 +113,12 @@ namespace SimiSoft2
             this.txtPago.Properties.Appearance.Options.UseFont = true;
             this.txtPago.Size = new System.Drawing.Size(171, 36);
             this.txtPago.TabIndex = 1;
+            this.txtPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPago_KeyPress);
             // 
             // txtTotalPagar
             // 
             this.txtTotalPagar.Enabled = false;
-            this.txtTotalPagar.Location = new System.Drawing.Point(185, 5);
+            this.txtTotalPagar.Location = new System.Drawing.Point(178, 5);
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtTotalPagar.Properties.Appearance.Options.UseFont = true;
@@ -182,10 +188,6 @@ namespace SimiSoft2
             this.btnAceptar.Text = "Registrar Venta";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // formaPagoBindingSource
-            // 
-            this.formaPagoBindingSource.DataSource = typeof(SimiSoft.BML.FormaPago);
-            // 
             // frmPago
             // 
             this.AcceptButton = this.btnAceptar;
@@ -205,10 +207,10 @@ namespace SimiSoft2
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lupFpago.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCambio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPago.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

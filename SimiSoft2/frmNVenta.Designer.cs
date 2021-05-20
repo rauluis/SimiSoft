@@ -29,6 +29,7 @@ namespace SimiSoft2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNVenta));
             this.gpCliente = new DevExpress.XtraEditors.GroupControl();
@@ -50,6 +51,7 @@ namespace SimiSoft2
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.gcVentaDetalle = new DevExpress.XtraGrid.GridControl();
             this.gvVentaDetalle = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gpCliente)).BeginInit();
             this.gpCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.luCliente.Properties)).BeginInit();
@@ -60,6 +62,7 @@ namespace SimiSoft2
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcVentaDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvVentaDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gpCliente
@@ -80,7 +83,18 @@ namespace SimiSoft2
             this.luCliente.Properties.Appearance.Options.UseFont = true;
             this.luCliente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luCliente.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("idCliente", "id Cliente", 64, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("nombre", "Cliente", 55, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("razonSocial", "razon Social", 81, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("telefono", "telefono", 57, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("descuento", "descuento", 69, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("activo", "activo", 44, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.luCliente.Properties.DataSource = this.clienteBindingSource;
+            this.luCliente.Properties.DisplayMember = "nombre";
+            this.luCliente.Properties.DropDownRows = 5;
             this.luCliente.Properties.NullText = "";
+            this.luCliente.Properties.ValueMember = "idCliente";
             this.luCliente.Size = new System.Drawing.Size(273, 36);
             this.luCliente.TabIndex = 1;
             this.luCliente.EditValueChanged += new System.EventHandler(this.lookUpEdit1_EditValueChanged);
@@ -288,6 +302,10 @@ namespace SimiSoft2
             this.gvVentaDetalle.OptionsView.ShowFooter = true;
             this.gvVentaDetalle.OptionsView.ShowGroupPanel = false;
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(SimiSoft.BML.Cliente);
+            // 
             // frmNVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -319,6 +337,7 @@ namespace SimiSoft2
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcVentaDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvVentaDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +363,6 @@ namespace SimiSoft2
         private DevExpress.XtraGrid.Views.Grid.GridView gvVentaDetalle;
         private DevExpress.XtraEditors.LabelControl lblCambio;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
     }
 }

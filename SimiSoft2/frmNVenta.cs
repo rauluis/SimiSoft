@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
+using SimiSoft.BML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +17,14 @@ namespace SimiSoft2
     {
         public frmNVenta()
         {
+            SplashScreenManager.ShowDefaultWaitForm("Porfavor espere", "Inicianlizando nueva venta...");
+
             InitializeComponent();
         }
 
         private void frmNVenta_Load(object sender, EventArgs e)
         {
+            clienteBindingSource.DataSource = new Cliente().GetAll();
 
         }
 

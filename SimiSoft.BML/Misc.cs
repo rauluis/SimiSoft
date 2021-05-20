@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SimiSoft.BML
 {
-  public  class Misc
+  public static class Misc
     {
         public static decimal totalPago;
-
+        public static decimal pago;
+        public static int idFPago;
     }
 
 }
